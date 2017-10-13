@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paris</title>
+	<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Raleway|Bungee+Inline">
+    
+<body>
+
+<ul>
+  <li><a href="Whole_Map.html">Home</a></li>
+  <li><a href="Venice.html">Venice</a></li>
+  <li><a href="Japan.html">Japan</a></li>
+  <li><a href="Paris.html">Paris</a></li>
+  <li><a href="Argentina.html">Argentina</a></li> 
+  <li><a href="Bibliography2.html">Bibliography<a></li>
+</ul>
+<style>
+ul {
+    list-style-type: none;
+    margin-left:auto;
+   margin-right:auto;
+    overflow: hidden;
+    background-color: #FF6F65;
+    text-align: center;
+    width:460px;
+}
+
+li {
+    float: left;
+    font-family: 'Raleway', serif;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px;
+}
+	.BigText {
+			text-align: center;
+			font-family: 'Raleway', serif;
+		}
+img {
+	display: block;
+	margin: 0 auto;
+}
+h1{
+	font-family: 'Bungee Inline', serif;
+	text-align: center;
+}
+</body>
+</style>
+</head>
+<h1>Paris</h1>
+<!--this is where you can change the size of the map-->
+<div id="googleMap" style="width:1000px;height:400px;margin-left:auto;margin-right:auto"></div>
+
+<script>
+function myMap() {
+//latitude and longitude of where the map is centered
+//how zoomed in the map is 
+//mapProp is a dictionary  similar to how your css styles worked
+// west and south have negative values for longitude and latitude 
+var mapCenter = new google.maps.LatLng(48.8566,2.3522);
+var mapProp= {
+    center:mapCenter,
+    zoom:5,
+    styles:[
+  {
+    "featureType": "administrative.land_parcel",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ff1d7b"
+      },
+      {
+        "saturation": 10
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+]};
+    
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+//Paris,France
+var city = new google.maps.LatLng(48.8566,2.3522);
+
+
+
+//add some markers to map for each spot
+
+var cityMarker = new google.maps.Marker({position: city, icon:'meme.png'});
+cityMarker.setMap(map);
+}
+
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap">
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMKjZsZjpDwAgWzKOqYa3TfgRhkO14qwA&callback=myMap"></script>
+
+</body>
+
+	<ol>
+		<img src="Paris2.jpg" alt="Paris" height="400" length="500"> 	
+	<div id="main">
+		<p class="BigText">Ah Paris, one of the most luxurious  places to visit in the whole world. I want to go see the Eiffel tower and I want to just see what daily life is like in France. I am looking forward to seeing the beautiful scenery of France and I have always wanted to try french food and see what their culture is all about. I also want to see the Arc de Triophe and Palace of Versailles. Even though it is not in France, I have always wanted to go to Monaco and watch the Grand Prix </p>
+</html>

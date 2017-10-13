@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Venice</title>
+	<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Raleway|Bungee+Inline">
+<body>
+
+<ul>
+  <li><a href="Whole_Map.html">Home</a></li>
+  <li><a href="Venice.html">Venice</a></li>
+  <li><a href="Japan.html">Japan</a></li>
+  <li><a href="Paris.html">Paris</a></li>
+  <li><a href="Argentina.html">Argentina</a></li> 
+  <li><a href="Bibliography2.html">Bibliography<a></li>
+</ul>
+<style>
+ul {
+    list-style-type: none;
+    margin-left:auto;
+   margin-right:auto;
+    overflow: hidden;
+    background-color: #FF6F65;
+    text-align: center;
+    width:460px;
+}
+
+li {
+    float: left;
+    font-family: 'Raleway', serif;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px;
+}
+	.BigText {
+			text-align: center;
+			font-family: 'Raleway', serif;
+		}
+img {
+	display: block;
+	margin: 0 auto;
+}
+h1{
+	font-family: 'Bungee Inline', serif;
+	text-align: center;
+}
+</body>
+</style>
+</head>
+<h1>Venice</h1>
+<!--this is where you can change the size of the map-->
+<div id="googleMap" style="width:1000px;height:400px;margin-left:auto;margin-right:auto"></div>
+
+<script>
+function myMap() {
+//latitude and longitude of where the map is centered
+//how zoomed in the map is 
+//mapProp is a dictionary  similar to how your css styles worked
+// west and south have negative values for longitude and latitude 
+var mapCenter = new google.maps.LatLng(45.4408,12.3155);
+var mapProp= {
+    center:mapCenter,
+    zoom:5,
+    styles:[
+  {
+    "featureType": "administrative.land_parcel",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ff1d7b"
+      },
+      {
+        "saturation": 10
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+]};
+    
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+//Venice,Italy
+var city2 = new google.maps.LatLng(45.4408,12.3155);
+
+//Example of a polyline
+var myTrip = [city4,city3,city2,city];
+var flightPath = new google.maps.Polyline({
+  path:myTrip,
+  strokeColor:"#1b92c1",
+  strokeOpacity:0.8,
+  strokeWeight:2
+});
+//dont forget to add it to the map
+flightPath.setMap(map);
+
+var city2Marker = new google.maps.Marker({position: city2, icon:'noragrets.png'});
+city2Marker.setMap(map);
+
+
+
+
+
+
+
+
+
+
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap">
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMKjZsZjpDwAgWzKOqYa3TfgRhkO14qwA&callback=myMap"></script>
+</body>
+	<ol>
+		<img src="Venice2.jpg" alt="Venice" height="400" length="1300"> 
+	<div id="main">
+		<p class="BigText">Venice, the home of some of the world's most famous artists. The birthplace of the Renaissance and Da Vinci. The geography of Venice is just really beautiful and the architecture in Venice is very unique to a lot of other places in the world. I have always wanted to go on a water taxi and use it to get to a restaurant or back to where I am staying </p>
+</html>
